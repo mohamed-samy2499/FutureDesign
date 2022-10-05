@@ -1,0 +1,715 @@
+html,body
+{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    scroll-behavior:smooth !important;
+    
+}
+
+#about {
+    font-size: 1.5rem !important;
+}
+*
+{
+    box-sizing: border-box;
+}
+.home
+{
+    height: 100vh;
+    width: 100vw;
+    
+}
+.image-home1
+{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/slideshow-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.image-home2
+{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/slideshow-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.image-home3
+{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/slideshow-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.carousel-item img
+{
+    height: 100vh;
+
+}
+.home-caption
+{
+    
+}
+.home-caption-mid
+{
+    font-size: 100px;
+    font-weight: 700 !important;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    
+    right: 39%;
+    animation: home 1s normal;
+}
+@keyframes home
+{
+    0%{right:0%; opacity: 0.1;}
+    100%{right: 39%;}
+}
+
+.icon-center
+{
+    padding-left:10px ;
+    padding-right: 10px;
+}
+.navlink
+{
+    font-weight: bold;
+}
+.nav-link:hover
+{
+    color: #f25454 !important;
+}
+.active
+{
+    color: #f25454 !important;
+}
+.navbar
+{
+    background-color: transparent !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: #E9E9E9;
+    }
+
+    .navbar {
+        background-color: #E9E9E9 !important;
+    }
+}
+.home-icons
+{
+    margin-left: 40px;
+
+}
+.setting
+{
+    position: absolute;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    z-index: 10000;
+}
+.setting a
+{
+    background-color: black;
+    width: 39px;
+    height: 39px;
+}
+.setting i
+{
+    color: white;
+    font-size: larger;
+}
+.setting:hover a
+{
+    background-color: rgba(000, 000, 000, 0.5);
+}
+.about-scroll
+{
+    bottom: 5%;
+}
+.scroll
+{
+    position: absolute;
+    width: 30px;
+    height: 45px;
+    bottom: 5%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+}
+.dot
+{
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    border: white;
+    border-radius:50% ;
+    transform: translateX(-50%);
+    z-index: 5;
+    animation: dot 2s infinite;
+}
+@keyframes dot
+{
+    0%{top:10%;}
+    25%{top:20%; opacity: 0.7;}
+    50%{top:30%; opacity: 0.5;}
+    75%{top:40%; opacity: 0.3;}
+    100%{top:20%; opacity: 0;}
+}
+  
+
+.side-arrow
+{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 5;
+}
+.left-icon
+{
+    top: 60% !important;
+}
+.left-icon-layer
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 99%;
+    left: 0;
+    background-color: white;
+    color: #f25454;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.left-icon:hover .left-icon-layer
+{
+    right: 0;
+    opacity: 1;
+    z-index: 9999999;
+}
+.right-icon-layer
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 99%;
+    left: 0;
+    background-color: white;
+    color: #f25454;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.right-icon:hover .right-icon-layer
+{
+    right: 0;
+    opacity: 1;
+    z-index: 9999999;
+}
+/******************/
+.bg-about
+{
+   position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: black;
+
+}
+.bg-about::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../images/AAAAAAAAA.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+.bg-about h2
+{
+    position: relative;
+    color: black;
+    opacity: 1 !important;
+}
+.about-line
+{
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    transition: all 1s;
+}
+.about-info:hover .about-line
+{
+    width: 70px;
+}
+.progress-bar
+{
+    background-color: #f25454 !important;
+}
+.perc
+{
+    width: 80%;
+    transform: translateX(80%);
+}
+.perc1
+{
+    width: 95%;
+    transform: translateX(95%);
+}
+.perc2
+{
+    width: 85%;
+    transform: translateX(85%);
+}
+.perc3
+{
+    width: 70%;
+    transform: translateX(70%);
+}
+#about .container
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+/************************/
+#team .container
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+.bg-team
+{
+   position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: black;
+
+}
+.bg-team::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../images/kisspng-letter-case-o-english-alphabet-letter-background-5b27f98b8e1334.400165291529346443582.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+.bg-team h2
+{
+    position: relative;
+    color: black;
+    opacity: 1 !important;
+}
+.member-layer
+{
+    background-color: #f25454;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.team-item:hover .member-layer
+{
+    opacity: 0.8;
+}
+.member-icons
+{
+    position: relative;
+    top: 5%;
+    transition: 0.5s;
+}
+/* .team-item:hover .member-icons
+{
+   top: 0%;
+} */
+/* .team-item:hover img
+{
+    transform: scale(1.1);
+} */
+.team-item img
+{
+    transition: all 0.5s;
+}
+.my-margin
+{
+    margin-bottom: 40px;
+}
+.whole-member:hover h5
+{
+    color: #f25454;
+}
+.whole-member:hover .team-item img
+{
+    transform:scale(1.1);
+}
+.whole-member:hover .member-icons
+{
+    top: 0;
+}
+.whole-member:hover .member-layer
+{
+    opacity: 0.8;
+}
+/******************/
+.contact-info .container
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.btn
+{
+    background-color: #f25454;
+    color: white;
+    border-radius: 3px;
+    padding: 18px 30px;
+    line-height: 1;
+    font-weight: 700;
+    border-width: 0;
+    transition: 0.5s;
+}
+.btn:hover
+{
+    color: white !important;
+    opacity: 0.7;
+}
+.my-padd
+{
+    padding-right: 60px;
+}
+@media screen and (max-width:600px) {
+    
+    .contact-us-btn
+    {
+        text-align: center;
+        margin: auto;
+    }
+}   
+/*************/
+.bg-services
+{
+   position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: black;
+
+}
+.bg-services::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../images/clipart2033798.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+.bg-services h2
+{
+    position: relative;
+    color: black;
+    opacity: 1 !important;
+}
+#services .container
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.services-col
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.services-col h3
+{
+    transition: 0.5s;
+}
+.services-col:hover h3
+{
+    color: #f25454;
+}
+.services-icon
+{
+    color: #f25454;
+    font-size: 32px;
+}
+.bg-grey
+{
+    background-color: #fafafa;
+}
+/************/
+.bg-reviews
+{
+   position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: black;
+
+}
+.bg-reviews::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../images/CCCCCC.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+.bg-reviews h2
+{
+    position: relative;
+    color: black;
+    opacity: 1 !important;
+}
+#reviews .container
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#reviews .active
+{
+    font-family: "Open Sans", sans-serif;
+    color: #666 !important;
+}
+.img-thumbnail
+{
+    border: 1px solid #fff !important;
+}
+.client-info
+{
+    margin-top: 50px !important;
+}
+.carousel-indicator
+{
+    padding-bottom: 20px;
+}
+/************/
+.bg-contact
+{
+   position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: black;
+
+}
+.bg-contact::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../images/ggggg.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+.bg-contact h2
+{
+    position: relative;
+    color: black;
+    opacity: 1 !important;
+}
+.contact-hr
+{
+    background-color: #666;
+}
+#contact .container
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.add-con i
+{
+    color: #f25454;
+    font-size: 36px; 
+}
+#contact
+{
+    background-color: #FAFAFA;
+}
+.form-control
+{
+    padding: 14px 18px;
+}
+.my-area
+{
+    height: 110px !important;
+}
+.form-control i
+{
+    font-size: 15px !important;
+}
+.address h4
+{
+    transition:all 1s;
+}
+.phone h4
+{
+    transition:all 1s;
+}
+.say h4
+{
+    transition:all 1s;
+}
+.address:hover h4
+{
+    color: #f25454;
+}
+.phone:hover h4
+{
+    color: #f25454;
+}
+.say:hover h4
+{
+    color: #f25454;
+}
+.email-protected
+{
+    text-decoration: none;
+    color: #6c757d;
+
+}
+.email-protected:hover
+{
+    color: #f25454;
+}
+/**************/
+#footer
+{
+    background-color: #222;
+    background-image: url(../images/world-map.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    left: 0;
+    right: 0;
+
+}
+.footer-img
+{
+    padding-top: 50px;
+}
+.email-pro
+{
+    text-decoration: none;
+    color: #6c757d;
+    transition: 0.5s;
+}
+.email-pro:hover
+{
+    color: #f25454;
+}
+.pop-tags
+{
+    border: 1px solid #b0b0b0;
+    float: left;
+    padding: 3px 10px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #6c757d;
+    transition: 0.5s;
+}
+.pop-tags:hover
+{
+    color: #f25454;
+    border-color: #f25454;
+}
+#last1
+{
+    background-color: #1a1a1a;
+}
+.last
+{
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.bot-icon
+{
+    color: white;
+    transition: 0.5s;
+}
+.bot-icon:hover
+{
+    color: #f25454;
+}
+.foot-left
+{
+    color: #6c757d;
+}
+.foot-txt
+{
+    text-align: right;
+}
+.foot-logo
+{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+.foot-logo:hover
+{
+    color: #f25454;
+}
+@media screen and (max-width: 600px) {
+    .right-foot-icons
+    {
+        justify-content: center;
+    }
+    .foot-left
+    {
+        justify-content: center;
+    }
+    .foot-txt
+    {
+        text-align: center;
+        margin-top: 20px;
+    }
+}

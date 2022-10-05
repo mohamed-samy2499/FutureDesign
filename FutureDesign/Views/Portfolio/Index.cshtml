@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Category>
+
+<style>
+
+    /***********/
+    .navbar{
+        background-color:#e9e9e9!important;
+    }
+    .SearchBar
+    {
+        display:flex;
+        justify-content: center;
+    }
+    .home{
+        background-color: #FAFAFA;
+    }
+    .home .container
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+</style>
+
+
+
+
+<section id="team"style="padding-top: 150px">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="about-info d-flex justify-content-center align-items-center flex-column text-center">
+                        <div class="bg-team">
+                            <h2 class="pt-5 fw-bolder">Our Portfolio</h2>
+                        </div>
+                        <div class="about-line"></div>
+                        <form asp-action="Index" asp-controller="Portfolio">
+                    <div class="SearchBar text-center py-5">
+                        <div class=" col-md-6 col-lg-10">
+                            <input name="SearchValue" placeholder="Search for a category..." class="form-control"/>
+                        </div>
+                        <div class="col-sm p-l-10">
+                            <input type="submit" value="Search" class="btn btn-success"/>
+                        </div>
+                    </div>
+                </form>
+                        @*<p class=" text-muted py-5">Vestibulum ante ipsum primis in faucibus orci. Morbi tincidunt urna
+                            imperdiet tincidunt <br>
+                            rhoncus. Sed mollis ligula non massa aliquam faucibus.</p>*@
+                    </div>
+
+                </div>
+            </div>
+            <div class="row p-10">
+            @if (Model.Count() > 0)
+            {
+                @foreach (var item in Model)
+               {
+
+                <div class="col-md-4 whole-member">
+                        <div class="team-item overflow-hidden position-relative my-margin text-center">
+                            <img src="@item.ImgPath" class="w-100 rounded" alt="@item.Name">
+                            <div class="member-layer position-absolute w-100 h-100 text-center text-white rounded">
+                                <div class="member-icons w-100 h-100 d-flex align-items-center justify-content-center">
+                                    <a asp-action="Samples" asp-controller = "Home" asp-route-id="@item.Id"><i class=" text-center fab fa-twitter px-3 text-white">see samples</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-details text-center">
+                            <h5>@item.Name</h5>
+                           <a asp-action="Samples" asp-controller = "Home" asp-route-id="@item.Id"> <p>High Quality Designs</p></a>
+                        </div>
+                    </div>
+
+               }
+                
+            }
+
+            </div>
+        </div>
+    </section>

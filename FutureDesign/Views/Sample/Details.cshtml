@@ -1,0 +1,29 @@
+﻿@model Sample
+@{
+    ViewData["Title"] = "Details";
+    string CatName = ViewData["CatName"] as string;
+}
+
+<h1>Details</h1>
+<br />
+<br />
+
+<div class="container">
+
+<div class="row">
+        <div class="col-md-2">@Html.DisplayNameFor(m => m.Category)</div>
+        <div class="col-md-10">@CatName</div>
+    </div>
+@*    <div class="row">
+        <div class="col-md-2">@Html.DisplayNameFor(m => m.EnrollDate)</div>
+        <div class="col-md-10">@Html.DisplayFor(m => m.EnrollDate)</div>
+    </div>*@
+     <div class="row">
+        <div class="col-md-2">@Html.DisplayNameFor(m => m.ImgPath)</div>
+        <div class="col-md-10"><img src="@Model.ImgPath" class=""/></div>
+    </div>
+  <br />
+  <br />
+
+     <a asp-action="Index" class="btn btn-light">Return to all Data Page</a>
+</div>

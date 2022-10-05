@@ -1,0 +1,190 @@
+﻿@model IEnumerable<String>
+@{
+    ViewData["Title"] = "Samples";
+    var Cat = ViewData["Cat"];
+}
+
+@section Styles{
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="~/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="~/plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="~/plugins/animate-css/animate.css" rel="stylesheet" />
+       <!-- Light Gallery Plugin Css -->
+    <link href="~/plugins/light-gallery/css/lightgallery.css" rel="stylesheet">
+    <!-- Morris Chart Css-->
+    <link href="~/plugins/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="~/css1/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="~/css1/themes/all-themes.css" rel="stylesheet" />
+}
+<style>
+    /***********/
+    .navbar{
+        background-color:#e9e9e9!important;
+    }
+.movie-poster
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 3.8rem;
+    overflow: hidden;
+}
+.layer
+{
+    background-color:rgba(255, 255, 255, 0.7);
+    top: 100%;
+
+    left: 0;
+   
+    transition: all 0.5s;
+}
+.movie-poster img
+{
+    height: 400px;
+    width:400px;
+    object-fit: contain;
+}
+.movie-poster:hover .layer
+{
+    top: 0;
+    bottom:0;
+}
+.borderClass{
+    border-style: groove ;
+    border-radius: 15px;
+}
+</style>
+@*<h1>Category -  @Cat</h1>
+
+<br />
+
+
+<br />
+<br />*@
+@if(Model?.Count()> 0)
+{
+@*<div class="container ">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 borderClass">
+                <div class="movie-poster position-relative">
+                        <a href="@item" target="_blank">
+                        <img  src="@item" alt="" class="w-100 rounded">
+
+                        </a>
+                </div>
+
+            </div>
+                
+        }
+    </div>
+
+</div>*@
+ <div class="container-fluid" style="padding-top: 150px">
+            <!-- Image Gallery -->
+            <div class="block-header">
+                <h2>
+                    Category -  @Cat
+                    @*<small>Taken from <a href="http://sachinchoolur.github.io/lightGallery/" target="_blank">sachinchoolur.github.io/lightGallery</a></small>*@
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Samples
+                                @*<small>All pictures taken from <a href="https://unsplash.com/" target="_blank">unsplash.com</a></small>*@
+                            </h2>
+                        </div>
+                        </div>
+                               </div>
+                    </div>
+                
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+
+                        <div class="body">
+                                <div id="aniimated-thumbnials" class="list-unstyled row clearfix">
+                             @foreach (var item in Model)
+                            {
+                                <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="">
+                                        <a href="@item" data-sub-html="Demo Description">
+                                            <img class="img-responsive thumbnail" src="@item">
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                                </div>
+                        </div>
+                               </div>
+                    </div>
+            </div>
+        </div>
+    
+
+        
+}
+else
+{
+    <div class="alert alert-warning">
+        <h3 >No Data Found!</h3>
+    </div>
+}
+
+@section Scripts{
+     <!-- Jquery Core Js -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="~/plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="~/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="~/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="~/plugins/node-waves/waves.js"></script>
+        <!-- Light Gallery Plugin Js -->
+    <script src="~/plugins/light-gallery/js/lightgallery-all.js"></script>
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="~/plugins/jquery-countto/jquery.countTo.js"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="~/plugins/raphael/raphael.min.js"></script>
+    <script src="~/plugins/morrisjs/morris.js"></script>
+
+    <!-- ChartJs -->
+    <script src="~/plugins/chartjs/Chart.bundle.js"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="~/plugins/flot-charts/jquery.flot.js"></script>
+    <script src="~/plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="~/plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="~/plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="~/plugins/flot-charts/jquery.flot.time.js"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="~/plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Custom Js -->
+    <script src="~/js1/pages/medias/image-gallery.js"></script>
+    <script src="~/js1/admin.js"></script>
+}

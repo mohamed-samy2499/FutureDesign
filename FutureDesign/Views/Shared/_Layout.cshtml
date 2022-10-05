@@ -1,0 +1,193 @@
+﻿@inject SignInManager<IdentityUser> signInManager
+@inject UserManager<IdentityUser> userInManager
+
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,600italic,700,700italic"
+        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,600italic,700,700italic"
+        rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/styles.css">
+    @*<link href='~/lib/arcontactus.css' rel='stylesheet'/>*@
+    <link rel="icon" href="~/images/futureLogoTitle.PNG" type="image/x-icon">
+    @RenderSection("Styles",required:false)
+
+  
+</head>
+
+<body>
+
+    @*<div id='arcontactus'></div>*@
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="~/images/futureblack.png" alt="future"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item text-white">
+                            <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link smooth-scroll" asp-controller="About" asp-action="Index">About</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link"  asp-controller="Portfolio" asp-action="Index">Portfolio</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link" asp-controller="Service" asp-action="Index">Services</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link"  asp-controller="Contact" asp-action="Index">Contact</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link" asp-controller="Account" asp-action="Login">login</a>
+                        </li>
+                        @if(signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item text-white">
+                            <a class="nav-link" asp-controller="Category" asp-action="Index">Categories</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link" asp-controller="Sample" asp-action="Index">Samples</a>
+                        </li>
+                       @* <li class="nav-item text-white">
+                            <a class="nav-link" asp-controller="User" asp-action="Index">Users</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link" asp-controller="Role" asp-action="Index">Roles</a>
+                        </li>*@
+                    }
+                    <li class="home-icons text-white">
+                        <li class="nav-item pt-1 ">
+                            <a class="nav-link icon-left" href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item pt-1">
+                            <a class="nav-link icon-center" href="https://www.facebook.com/profile.php?id=100064174142216"target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item pt-1">
+                            <a class="nav-link" href="https://www.instagram.com/"target="_blank"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        @RenderBody()
+    <section id="footer">
+        <div class="container">
+            <div class="footer-img d-flex justify-content-center align-items-center">
+                <img src="~/images/oie_transparent2.png" alt="future">
+            </div>
+
+            <div class="row py-5">
+                <div class="col-md-3 col-sm-6">
+                    <h5 class="text-white fw-bold py-2">Contact Info</h5>
+                    <div class="text-muted">
+                        <p>
+                            نموذج 51 - الشطر 3 - <br>
+                             المعادي - القاهرة
+                        </p>
+                        <p>
+                            0112 2244269 / 01148975048 <br>
+                            <a href="https://gmail.com" class="email-pro "  target="_blank">futureadvertising560@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5 class="text-white fw-bold py-2">Useful Links</h5>
+                    <div class="text-muted">
+                        <p>
+                            <a href="#home" class="email-pro ">support</a>
+                            <br>
+                            <a href="#home" class="email-pro ">Privacy Polcy</a>
+                            <br>
+                            <a href="#home" class="email-pro ">Terms & Conditions</a>
+                            <br>
+                            <a href="#home" class="email-pro ">Affiliate Program</a>
+                            <br>
+                            <a href="#home" class="email-pro ">Careers</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5 class="text-white fw-bold py-2">Recent Posts</h5>
+                    <div class="text-muted">
+                        <p>
+                            <a href="#home" class="email-pro ">Sunset in Venice</a>
+                            <br>
+                            <a href="#home" class="email-pro ">Aerial View of Village</a>
+                            <br>
+                            <a href="#home" class="email-pro ">Lighted Concrete City</a>
+                            <br>
+                            <a href="#home" class="email-pro ">The Little Ghost</a>
+                            <br>
+                            <a href="#home" class="email-pro ">Royal Oats ft. Waldo</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+
+                    <h5 class="text-white fw-bold py-2">Popular Tags</h5>
+
+                    <div class="tags clearfix">
+                        <a href="#home" class="pop-tags">HTML5</a>
+                        <a href="#home" class="pop-tags">CSS3</a>
+                        <a href="#home" class="pop-tags">jQuery</a>
+                        <a href="#home" class="pop-tags">UX / UI</a>
+                        <a href="#home" class="pop-tags">Web</a>
+                        <a href="#home" class="pop-tags">Graphic</a>
+                        <a href="#home" class="pop-tags">Design</a>
+                        <a href="#home" class="pop-tags">Development</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+    <section id="last1">
+        <div class="container">
+            <div class="row last">
+                <div class="col-md-6">
+                    <div class="right-foot-icons d-flex ">
+                        <a href="https://www.facebook.com/profile.php?id=100064174142216" target="_blank"class="bot-icon"><i class="fab fa-facebook-f px-3 "></i></a>
+                        <a href="#home" class="bot-icon"><i class="fab fa-linkedin-in px-3 "></i></a>
+                        <a  href="#home" class="bot-icon"><i class="fas fa-basketball-ball px-3 "></i></a>
+                        <a target="_blank" href="https://www.pinterest.com/search/pins/?q=banner%20advertising&rs=typed" class="bot-icon"><i class="fab fa-pinterest px-3 "></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 foot-left ">
+                    <p class="foot-txt">
+                        Copyright © 2020
+                        <a asp-controller="Home" asp-action="Index" class="fw-bold foot-logo">Future</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script src="~/js/bootstrap.bundle.js"></script>
+    <script src="~/js/main.js"></script>
+    @*  <script src="~/lib/jquery-2.0.0.min.js"></script>
+    <script src='~/lib/arcontactus.js'></script>
+    <script src="~/lib/script.js"></script>*@
+    @RenderSection("Scripts",required:false)
+@*    <script>
+        $(".navbar-toggler").click(function () {
+    $("nav").css("background-color", "#E9E9E9");
+})
+    </script>*@
+</body>
+
+</html>
